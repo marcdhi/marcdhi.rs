@@ -19,8 +19,10 @@ PS: Do not forget the `semi-colon` in the end
 
 * Compile step - `rustc main.rs` this outputs a binary executable. Along with this a file called `main.pdb` is a file containing the debugging information with the `.pdb` extension
 
-* Running - ```bash
-./main```
+* Running - 
+```bash
+./main
+```
 
 ## Adding the Cargo magic
 
