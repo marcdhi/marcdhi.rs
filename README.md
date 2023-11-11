@@ -29,3 +29,13 @@ PS: Do not forget the `semi-colon` in the end
 * What is a [TOML](https://toml.io/en/) file? - TOML aims to be a minimal configuration file format that's easy to read due to obvious semantics. TOML is designed to map unambiguously to a hash table. TOML should be easy to parse into data structures in a wide variety of languages.
 
 * Cargo generates a TOML for us that initially contains no dependencies. Just has the package information.
+
+
+# Rust Features ;
+
+1. In Rust, variables are immutable by default, meaning once we give the variable a value, the value won’t change
+
+```bash
+let apples = 5; // immutable
+let mut bananas = 5; // mutable
+```
