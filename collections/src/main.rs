@@ -8,7 +8,7 @@ fn main() {
     // // Demonstrating a way to remove the values from heap after the scope ends
     // {let v2 = vec![1,2,3];}
 
-    let mut v = vec![1,2,3,4,5,6];
+    // let mut v = vec![1,2,3,4,5,6];
 
     // let var = &v[1]; // v = [1,2,3,4,5,6]
 
@@ -32,10 +32,39 @@ fn main() {
     // To resolve this, you can use the get method to obtain an Option<&T> and then match on it to handle the case where the index is out of bounds
         
 
-    v.push(2121);
-    if let Some(var) = v.get(1) {
-        println!("Hurrah {}", var);
-    }else {
-        println!("Out of bound!!")
+    // v.push(2121);
+    // if let Some(var) = v.get(1) {
+    //     println!("Hurrah {}", var);
+    // }else {
+    //     println!("Out of bound!!")
+    // }
+
+    // let mut v = vec![1,2,3,4,5];
+
+    // for i in &mut v{
+    //     *i += 50;
+    // }
+
+    // for i in &v {
+    //     println!("{}", i)
+    // }
+
+    enum SpreadsheetCell {
+        Int(i32),
+        Float(f64),
+        Text(String)
+    }
+
+    let row = vec![
+        SpreadsheetCell::Int(3),
+        SpreadsheetCell::Float(10.2),
+        SpreadsheetCell::Text(String::from("blue"))
+    ];
+
+    match &row[0] {
+        SpreadsheetCell::Int(i) => println!("{}", i),
+        _ => println!("Not an integer")
     }
 }
+
+
